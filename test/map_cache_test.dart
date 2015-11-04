@@ -15,8 +15,9 @@
 library quiver.cache.map_cache_test;
 
 import 'dart:async';
+
+import 'package:quiver_cache/cache.dart';
 import 'package:test/test.dart';
-import 'package:quiver/cache.dart';
 
 main() {
   group('MapCache', () {
