@@ -19,5 +19,5 @@ import 'dart:collection';
 
 import 'package:quiver/collection.dart' show LruMap;
 
-part 'src/cache/cache.dart';
-part 'src/cache/map_cache.dart';
+part 'src/cache.dart';
+part 'src/map_cache.dart';
