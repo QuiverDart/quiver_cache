@@ -27,13 +27,13 @@ main() {
       cache = new MapCache();
     });
 
-    test("should return null for a non-existent key", () {
+    test('should return null for a non-existent key', () {
       return cache.get('foo').then((value) {
         expect(value, isNull);
       });
     });
 
-    test("should return a previously set key/value pair", () {
+    test('should return a previously set key/value pair', () {
       return cache
           .set('foo', 'bar')
           .then((_) => cache.get('foo'))
@@ -42,7 +42,7 @@ main() {
       });
     });
 
-    test("should invalidate a key", () {
+    test('should invalidate a key', () {
       return cache
           .set('foo', 'bar')
           .then((_) => cache.invalidate('foo'))
@@ -52,13 +52,13 @@ main() {
       });
     });
 
-    test("should load a value given a synchronous loader", () {
+    test('should load a value given a synchronous loader', () {
       return cache.get('foo', ifAbsent: (k) => k + k).then((value) {
         expect(value, 'foofoo');
       });
     });
 
-    test("should load a value given an asynchronous loader", () {
+    test('should load a value given an asynchronous loader', () {
       return cache
           .get('foo', ifAbsent: (k) => new Future.value(k + k))
           .then((value) {
