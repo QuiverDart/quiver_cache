@@ -17,7 +17,7 @@ library quiver.cache;
 import 'dart:async';
 import 'dart:collection';
 
-import 'package:quiver/collection.dart' show LruMap;
+import 'package:quiver_collection/collection.dart' show LruMap;
 
 part 'src/cache.dart';
 part 'src/map_cache.dart';
